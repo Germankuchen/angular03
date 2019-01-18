@@ -1,0 +1,61 @@
+<div class="container">
+    <br>
+    <h1>Pipes</h1>
+    <hr>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Filtro</th>
+                <th scope="col">Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>Uppercase</td>
+                <td>{{nombre | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>{{nombre}}</td>
+                <td>Lowercase</td>
+                <td>{{nombre | lowercase}}</td>
+            </tr>
+            <tr>
+                <td>{{PI}}</td>
+                <td>Number</td>
+                <td>{{PI | number:'1.2-2'}}</td>
+            </tr>
+            <tr>
+                <td>{{salario}}</td>
+                <td>Currency</td>
+                <td>{{salario | currency}}</td>
+            </tr>
+            <tr>
+                <td>{{hoy}}</td>
+                <td>date</td>
+                <td>{{hoy | date:'dd/MM/yyyy'}}</td>
+            </tr>
+            <tr>
+                <td>{{hoy}}</td>
+                <td>date</td>
+                <td>Estamos en {{hoy | date:'MMMM'}}</td>
+            </tr>
+            <tr>
+                <td>{{prueba}}</td>
+                <td>Filtro particular</td>
+                <td>{{prueba | capitalizado}}</td>
+            </tr>
+            <tr>
+                <td>{{contrasena}}</td>
+                <td>contrasena {{activar}}
+                    <br>
+                    <button (click)="activar = !activar">Activar/Desactivar</button>
+                </td>
+                <td>{{contrasena | contrasena:activar}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
